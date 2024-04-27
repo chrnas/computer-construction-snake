@@ -1,0 +1,391 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'uprogCPU'
+
+Design Information
+------------------
+Command Line   : map -detail -u -p xc6slx16-3-csg324 -pr b -c 100 -o
+design_map.ncd design.ngd design.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon May 22 15:22:46 2023
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Slice Logic Utilization:
+  Number of Slice Registers:                   411 out of  18,224    2%
+    Number used as Flip Flops:                 390
+    Number used as Latches:                     21
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        593 out of   9,112    6%
+    Number used as logic:                      581 out of   9,112    6%
+      Number using O6 output only:             441
+      Number using O5 output only:              10
+      Number using O5 and O6:                  130
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:     10
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   233 out of   2,278   10%
+  Number of MUXCYs used:                       164 out of   4,556    3%
+  Number of LUT Flip Flop pairs used:          693
+    Number with an unused Flip Flop:           314 out of     693   45%
+    Number with an unused LUT:                 100 out of     693   14%
+    Number of fully used LUT-FF pairs:         279 out of     693   40%
+    Number of unique control sets:              22
+    Number of slice register sites lost
+      to control set restrictions:              69 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        92 out of     232   39%
+    Number of LOCed IOBs:                       23 out of      92   25%
+    IOB Flip Flops:                              2
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         4 out of      32   12%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   2 out of     248    1%
+    Number used as OLOGIC2s:                     2
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            2 out of      32    6%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.26
+
+Peak Memory Usage:  839 MB
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   16 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@xilinx.license.it.liu.se'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'1705@altera.license.it.liu.se'.
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:LIT:243 - Logical network joystick_code<3> has no load.
+INFO:LIT:243 - Logical network joystick_code<2> has no load.
+INFO:LIT:243 - Logical network joystick_code<1> has no load.
+INFO:LIT:243 - Logical network joystick_code<0> has no load.
+INFO:LIT:243 - Logical network GR1_test<19> has no load.
+INFO:LIT:243 - Logical network GR1_test<18> has no load.
+INFO:LIT:243 - Logical network GR1_test<17> has no load.
+INFO:LIT:243 - Logical network GR1_test<16> has no load.
+INFO:LIT:243 - Logical network GR1_test<15> has no load.
+INFO:LIT:243 - Logical network GR1_test<14> has no load.
+INFO:LIT:243 - Logical network GR1_test<13> has no load.
+INFO:LIT:243 - Logical network GR1_test<12> has no load.
+INFO:LIT:243 - Logical network GR1_test<11> has no load.
+INFO:LIT:243 - Logical network GR1_test<10> has no load.
+INFO:LIT:243 - Logical network GR1_test<9> has no load.
+INFO:LIT:243 - Logical network GR1_test<8> has no load.
+INFO:LIT:243 - Logical network GR1_test<7> has no load.
+INFO:LIT:243 - Logical network GR1_test<6> has no load.
+INFO:LIT:243 - Logical network GR1_test<5> has no load.
+INFO:LIT:243 - Logical network GR1_test<4> has no load.
+INFO:LIT:243 - Logical network GR1_test<3> has no load.
+INFO:LIT:243 - Logical network GR1_test<2> has no load.
+INFO:LIT:243 - Logical network GR1_test<1> has no load.
+INFO:LIT:243 - Logical network GR1_test<0> has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 92 IOs, 23 are locked
+   and 69 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+  12 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<1>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<2>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<3>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<4>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<5>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<6>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<7>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<8>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<9>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_cy<10>_rt
+LUT1 		Madd_AR[21]_GND_4_o_add_68_OUT_xor<21>_rt
+LUT1 		Madd_PC[11]_GND_4_o_add_39_OUT_xor<11>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| AR_test<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<16>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<17>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<18>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<19>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<20>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| AR_test<21>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| LED<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| LED<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| MISO                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| MOSI                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| PC_test<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_test<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| SCLK                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SS                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| TIMER_test<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<11>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<12>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<13>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<14>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<15>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<16>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<17>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<18>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<19>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<20>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<21>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<22>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<23>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<24>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| TIMER_test<25>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| uPC_test<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uPC_test<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| vgaBlue<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaBlue<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaGreen<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaGreen<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaGreen<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaRed<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaRed<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vgaRed<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal                    | Reset Signal      | Set Signal | Enable Signal                              | Slice Load Count | Bel Load Count |
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_BUFGP                       |                   |            |                                            | 15               | 27             |
+| clk_BUFGP                       |                   |            | jstk_enc_instance/jstk_instance/_n0057_inv | 4                | 9              |
+| clk_BUFGP                       |                   |            | jstk_enc_instance/jstk_instance/_n0060_inv | 5                | 40             |
+| clk_BUFGP                       |                   |            | uM[19]_GND_4_o_equal_46_o                  | 5                | 21             |
+| clk_BUFGP                       |                   |            | uM[19]_PWR_4_o_equal_49_o                  | 1                | 4              |
+| clk_BUFGP                       | rst_IBUF          |            |                                            | 17               | 59             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0667_inv                                 | 4                | 12             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0702_inv                                 | 12               | 22             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0709_inv                                 | 4                | 16             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0714_inv                                 | 6                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0718_inv                                 | 6                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0722_inv                                 | 6                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | _n0726_inv                                 | 6                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | grapic_inst/U2/Clk25                       | 3                | 10             |
+| clk_BUFGP                       | rst_IBUF          |            | grapic_inst/U2/_n0077_inv                  | 3                | 10             |
+| clk_BUFGP                       | rst_IBUF          |            | jstk_enc_instance/jstk_instance/bit_cnt<7> | 3                | 4              |
+| clk_BUFGP                       | rst_IBUF          |            | uM<17>                                     | 6                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | uM[19]_GND_4_o_equal_52_o                  | 5                | 21             |
+| clk_BUFGP                       | rst_IBUF          |            | uM[19]_PWR_4_o_equal_60_o                  | 3                | 14             |
+| clk_BUFGP                       | rst_uM[11]_OR_4_o |            | _n0366                                     | 3                | 8              |
+| clk_BUFGP                       | rst_uM[11]_OR_4_o |            | _n0661_inv                                 | 5                | 8              |
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+| uM[23]_GND_4_o_equal_120_o_BUFG |                   |            |                                            | 13               | 21             |
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                    |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uprogCPU/          |           | 192/253       | 313/411       | 443/593       | 0/0           | 0/5       | 1/2     | 2/2   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU                                  |
+| +U0                |           | 24/24         | 0/0           | 46/46         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/U0                               |
+| +U2                |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/U2                               |
+| +U3                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/U3                               |
+| +grapic_inst       |           | 0/16          | 0/30          | 0/42          | 0/0           | 0/4       | 0/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/grapic_inst                      |
+| ++U1               |           | 0/0           | 0/0           | 0/0           | 0/0           | 4/4       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/grapic_inst/U1                   |
+| ++U2               |           | 13/13         | 30/30         | 33/33         | 0/0           | 0/0       | 1/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/grapic_inst/U2                   |
+| ++U2_CR_port       |           | 3/3           | 0/0           | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/grapic_inst/U2_CR_port           |
+| +jstk_enc_instance |           | 5/19          | 6/68          | 10/60         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/jstk_enc_instance                |
+| ++jstk_instance    |           | 14/14         | 62/62         | 50/50         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | uprogCPU/jstk_enc_instance/jstk_instance  |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

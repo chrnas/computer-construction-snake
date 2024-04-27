@@ -1,0 +1,7 @@
+INFILE=/home/edvwe024/tsea83_proj/docs/uprogCPU/uprogCPU-synthdir/layoutdefault/design.ncd
+OUTFILE=/home/edvwe024/tsea83_proj/docs/uprogCPU/uprogCPU-synthdir/layoutdefault/design.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/edvwe024/tsea83_proj/docs/uprogCPU/uprogCPU-synthdir/layoutdefault
+LICENSE=ISE
+USER_INFO=211887302_1777494980_210602001_508

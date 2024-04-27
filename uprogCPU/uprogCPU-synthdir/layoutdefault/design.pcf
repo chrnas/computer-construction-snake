@@ -1,0 +1,200 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon May 22 15:23:03 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SS" LOCATE = SITE "T12" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "MISO" LOCATE = SITE "N10" LEVEL 1;
+COMP "SCLK" LOCATE = SITE "P11" LEVEL 1;
+COMP "MOSI" LOCATE = SITE "V12" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "P7" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "LED<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "U7" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "V7" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "N7" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "R7" LEVEL 1;
+COMP "vgaBlue<2>" LOCATE = SITE "T7" LEVEL 1;
+PIN Maddsub_n0349_pins<92> = BEL "Maddsub_n0349" PINNAME CLK;
+PIN grapic_inst/U2/Maddsub_n0068_pins<92> = BEL "grapic_inst/U2/Maddsub_n0068"
+        PINNAME CLK;
+PIN U3/Mram_p_mem_pins<16> = BEL "U3/Mram_p_mem" PINNAME CLKAWRCLK;
+PIN U3/Mram_p_mem_pins<17> = BEL "U3/Mram_p_mem" PINNAME CLKBRDCLK;
+PIN grapic_inst/U1/Mram_pictMem4_pins<28> = BEL "grapic_inst/U1/Mram_pictMem4"
+        PINNAME CLKA;
+PIN grapic_inst/U1/Mram_pictMem4_pins<29> = BEL "grapic_inst/U1/Mram_pictMem4"
+        PINNAME CLKB;
+PIN grapic_inst/U1/Mram_pictMem2_pins<28> = BEL "grapic_inst/U1/Mram_pictMem2"
+        PINNAME CLKA;
+PIN grapic_inst/U1/Mram_pictMem2_pins<29> = BEL "grapic_inst/U1/Mram_pictMem2"
+        PINNAME CLKB;
+PIN grapic_inst/U1/Mram_pictMem3_pins<28> = BEL "grapic_inst/U1/Mram_pictMem3"
+        PINNAME CLKA;
+PIN grapic_inst/U1/Mram_pictMem3_pins<29> = BEL "grapic_inst/U1/Mram_pictMem3"
+        PINNAME CLKB;
+PIN grapic_inst/U1/Mram_pictMem1_pins<28> = BEL "grapic_inst/U1/Mram_pictMem1"
+        PINNAME CLKA;
+PIN grapic_inst/U1/Mram_pictMem1_pins<29> = BEL "grapic_inst/U1/Mram_pictMem1"
+        PINNAME CLKB;
+TIMEGRP sys_clk_pin = BEL "pict_mem_update" BEL "pm_update" BEL "jstk_start"
+        BEL "PM_in_0" BEL "PM_in_1" BEL "PM_in_2" BEL "PM_in_3" BEL "PM_in_4"
+        BEL "PM_in_5" BEL "PM_in_6" BEL "PM_in_7" BEL "PM_in_8" BEL "PM_in_9"
+        BEL "PM_in_10" BEL "PM_in_11" BEL "PM_in_12" BEL "PM_in_13" BEL
+        "PM_in_14" BEL "PM_in_15" BEL "PM_in_16" BEL "PM_in_17" BEL "PM_in_18"
+        BEL "PM_in_19" BEL "PM_in_20" BEL "tile_0" BEL "tile_1" BEL "tile_2"
+        BEL "tile_3" BEL "uSPC_0" BEL "uSPC_1" BEL "uSPC_2" BEL "uSPC_3" BEL
+        "uSPC_4" BEL "uSPC_5" BEL "uSPC_6" BEL "uSPC_7" BEL "IR_0" BEL "IR_1"
+        BEL "IR_2" BEL "IR_3" BEL "IR_4" BEL "IR_5" BEL "IR_6" BEL "IR_7" BEL
+        "IR_8" BEL "IR_9" BEL "IR_10" BEL "IR_11" BEL "IR_12" BEL "IR_13" BEL
+        "IR_14" BEL "IR_15" BEL "IR_16" BEL "IR_17" BEL "IR_18" BEL "IR_19"
+        BEL "IR_20" BEL "index_0" BEL "index_1" BEL "index_2" BEL "index_3"
+        BEL "index_4" BEL "index_5" BEL "index_6" BEL "index_7" BEL "index_8"
+        BEL "index_9" BEL "index_10" BEL "index_11" BEL "index_12" BEL
+        "index_13" BEL "GR1_0" BEL "GR1_1" BEL "GR1_2" BEL "GR1_3" BEL "GR1_4"
+        BEL "GR1_5" BEL "GR1_6" BEL "GR1_7" BEL "GR1_8" BEL "GR1_9" BEL
+        "GR1_10" BEL "GR1_11" BEL "GR1_12" BEL "GR1_13" BEL "GR1_14" BEL
+        "GR1_15" BEL "GR1_16" BEL "GR1_17" BEL "GR1_18" BEL "GR1_19" BEL
+        "GR1_20" BEL "HR_0" BEL "HR_1" BEL "HR_2" BEL "HR_3" BEL "HR_4" BEL
+        "HR_5" BEL "HR_6" BEL "HR_7" BEL "HR_8" BEL "HR_9" BEL "HR_10" BEL
+        "HR_11" BEL "HR_12" BEL "HR_13" BEL "HR_14" BEL "HR_15" BEL "HR_16"
+        BEL "HR_17" BEL "HR_18" BEL "HR_19" BEL "HR_20" BEL "GR0_0" BEL
+        "GR0_1" BEL "GR0_2" BEL "GR0_3" BEL "GR0_4" BEL "GR0_5" BEL "GR0_6"
+        BEL "GR0_7" BEL "GR0_8" BEL "GR0_9" BEL "GR0_10" BEL "GR0_11" BEL
+        "GR0_12" BEL "GR0_13" BEL "GR0_14" BEL "GR0_15" BEL "GR0_16" BEL
+        "GR0_17" BEL "GR0_18" BEL "GR0_19" BEL "GR0_20" BEL "GR2_0" BEL
+        "GR2_1" BEL "GR2_2" BEL "GR2_3" BEL "GR2_4" BEL "GR2_5" BEL "GR2_6"
+        BEL "GR2_7" BEL "GR2_8" BEL "GR2_9" BEL "GR2_10" BEL "GR2_11" BEL
+        "GR2_12" BEL "GR2_13" BEL "GR2_14" BEL "GR2_15" BEL "GR2_16" BEL
+        "GR2_17" BEL "GR2_18" BEL "GR2_19" BEL "GR2_20" BEL "GR3_0" BEL
+        "GR3_1" BEL "GR3_2" BEL "GR3_3" BEL "GR3_4" BEL "GR3_5" BEL "GR3_6"
+        BEL "GR3_7" BEL "GR3_8" BEL "GR3_9" BEL "GR3_10" BEL "GR3_11" BEL
+        "GR3_12" BEL "GR3_13" BEL "GR3_14" BEL "GR3_15" BEL "GR3_16" BEL
+        "GR3_17" BEL "GR3_18" BEL "GR3_19" BEL "GR3_20" BEL "ASR_0" BEL
+        "ASR_1" BEL "ASR_2" BEL "ASR_3" BEL "ASR_4" BEL "ASR_5" BEL "ASR_6"
+        BEL "ASR_7" BEL "Joystick_Reg_0" BEL "Joystick_Reg_1" BEL
+        "Joystick_Reg_2" BEL "Joystick_Reg_3" BEL "PC_0" BEL "PC_1" BEL "PC_2"
+        BEL "PC_3" BEL "PC_4" BEL "PC_5" BEL "PC_6" BEL "PC_7" BEL "PC_8" BEL
+        "PC_9" BEL "PC_10" BEL "PC_11" BEL "uPC_0" BEL "uPC_1" BEL "uPC_2" BEL
+        "uPC_3" BEL "uPC_4" BEL "uPC_5" BEL "uPC_6" BEL "uPC_7" BEL "AR_0" BEL
+        "AR_1" BEL "AR_2" BEL "AR_3" BEL "AR_4" BEL "AR_5" BEL "AR_6" BEL
+        "AR_7" BEL "AR_8" BEL "AR_9" BEL "AR_10" BEL "AR_11" BEL "AR_12" BEL
+        "AR_13" BEL "AR_14" BEL "AR_15" BEL "AR_16" BEL "AR_17" BEL "AR_18"
+        BEL "AR_19" BEL "AR_20" BEL "AR_21" BEL "AR_neg" PIN
+        "Maddsub_n0349_pins<92>" BEL "TIMER_0" BEL "TIMER_1" BEL "TIMER_2" BEL
+        "TIMER_3" BEL "TIMER_4" BEL "TIMER_5" BEL "TIMER_6" BEL "TIMER_7" BEL
+        "TIMER_8" BEL "TIMER_9" BEL "TIMER_10" BEL "TIMER_11" BEL "TIMER_12"
+        BEL "TIMER_13" BEL "TIMER_14" BEL "TIMER_15" BEL "TIMER_16" BEL
+        "TIMER_17" BEL "TIMER_18" BEL "TIMER_19" BEL "TIMER_20" BEL "TIMER_21"
+        BEL "TIMER_22" BEL "TIMER_23" BEL "random_y_0" BEL "random_y_1" BEL
+        "random_y_2" BEL "random_y_3" BEL "random_y_4" BEL "random_y_5" BEL
+        "random_y_6" BEL "random_y_7" BEL "random_y_8" BEL "random_x_0" BEL
+        "random_x_1" BEL "random_x_2" BEL "random_x_3" BEL "random_x_4" BEL
+        "random_x_5" BEL "random_x_6" BEL "random_x_7" BEL "random_x_8" BEL
+        "random_x_9" BEL "LC_REG_0" BEL "LC_REG_1" BEL "LC_REG_2" BEL
+        "LC_REG_3" BEL "LC_REG_4" BEL "LC_REG_5" BEL "LC_REG_6" BEL "LC_REG_7"
+        BEL "LC_REG_8" BEL "LC_REG_9" BEL "LC_REG_10" BEL "LC_REG_11" BEL
+        "LC_REG_12" BEL "LC_REG_13" BEL "LC_REG_14" BEL "LC_REG_15" BEL
+        "jstk_enc_instance/UP" BEL "jstk_enc_instance/DOWN" BEL
+        "jstk_enc_instance/LEFT" BEL "jstk_enc_instance/RIGHT" BEL
+        "jstk_enc_instance/start_1" BEL "jstk_enc_instance/start_2" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_15" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_10" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_9" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_8" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_7" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_6" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_5" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_4" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_3" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_2" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_1" BEL
+        "jstk_enc_instance/jstk_instance/clk_div_0" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_8" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_7" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_6" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_5" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_4" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_3" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_2" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_1" BEL
+        "jstk_enc_instance/jstk_instance/bit_cnt_0" BEL
+        "jstk_enc_instance/jstk_instance/SR_39" BEL
+        "jstk_enc_instance/jstk_instance/SR_38" BEL
+        "jstk_enc_instance/jstk_instance/SR_37" BEL
+        "jstk_enc_instance/jstk_instance/SR_36" BEL
+        "jstk_enc_instance/jstk_instance/SR_35" BEL
+        "jstk_enc_instance/jstk_instance/SR_34" BEL
+        "jstk_enc_instance/jstk_instance/SR_33" BEL
+        "jstk_enc_instance/jstk_instance/SR_32" BEL
+        "jstk_enc_instance/jstk_instance/SR_31" BEL
+        "jstk_enc_instance/jstk_instance/SR_30" BEL
+        "jstk_enc_instance/jstk_instance/SR_29" BEL
+        "jstk_enc_instance/jstk_instance/SR_28" BEL
+        "jstk_enc_instance/jstk_instance/SR_27" BEL
+        "jstk_enc_instance/jstk_instance/SR_26" BEL
+        "jstk_enc_instance/jstk_instance/SR_25" BEL
+        "jstk_enc_instance/jstk_instance/SR_24" BEL
+        "jstk_enc_instance/jstk_instance/SR_23" BEL
+        "jstk_enc_instance/jstk_instance/SR_22" BEL
+        "jstk_enc_instance/jstk_instance/SR_21" BEL
+        "jstk_enc_instance/jstk_instance/SR_20" BEL
+        "jstk_enc_instance/jstk_instance/SR_19" BEL
+        "jstk_enc_instance/jstk_instance/SR_18" BEL
+        "jstk_enc_instance/jstk_instance/SR_17" BEL
+        "jstk_enc_instance/jstk_instance/SR_16" BEL
+        "jstk_enc_instance/jstk_instance/SR_15" BEL
+        "jstk_enc_instance/jstk_instance/SR_14" BEL
+        "jstk_enc_instance/jstk_instance/SR_13" BEL
+        "jstk_enc_instance/jstk_instance/SR_12" BEL
+        "jstk_enc_instance/jstk_instance/SR_11" BEL
+        "jstk_enc_instance/jstk_instance/SR_10" BEL
+        "jstk_enc_instance/jstk_instance/SR_9" BEL
+        "jstk_enc_instance/jstk_instance/SR_8" BEL
+        "jstk_enc_instance/jstk_instance/SR_7" BEL
+        "jstk_enc_instance/jstk_instance/SR_6" BEL
+        "jstk_enc_instance/jstk_instance/SR_5" BEL
+        "jstk_enc_instance/jstk_instance/SR_4" BEL
+        "jstk_enc_instance/jstk_instance/SR_3" BEL
+        "jstk_enc_instance/jstk_instance/SR_2" BEL
+        "jstk_enc_instance/jstk_instance/SR_1" BEL
+        "jstk_enc_instance/jstk_instance/SR_0" BEL "grapic_inst/U2/Ypixel1_9"
+        BEL "grapic_inst/U2/Ypixel1_8" BEL "grapic_inst/U2/Ypixel1_7" BEL
+        "grapic_inst/U2/Ypixel1_6" BEL "grapic_inst/U2/Ypixel1_5" BEL
+        "grapic_inst/U2/Ypixel1_4" BEL "grapic_inst/U2/Ypixel1_3" BEL
+        "grapic_inst/U2/Ypixel1_2" BEL "grapic_inst/U2/Ypixel1_1" BEL
+        "grapic_inst/U2/Ypixel1_0" BEL "grapic_inst/U2/Xpixel1_9" BEL
+        "grapic_inst/U2/Xpixel1_8" BEL "grapic_inst/U2/Xpixel1_7" BEL
+        "grapic_inst/U2/Xpixel1_6" BEL "grapic_inst/U2/Xpixel1_5" BEL
+        "grapic_inst/U2/Xpixel1_4" BEL "grapic_inst/U2/Xpixel1_3" BEL
+        "grapic_inst/U2/Xpixel1_2" BEL "grapic_inst/U2/Xpixel1_1" BEL
+        "grapic_inst/U2/Xpixel1_0" BEL "grapic_inst/U2/ClkDiv_1" BEL
+        "grapic_inst/U2/ClkDiv_0" PIN "grapic_inst/U2/Maddsub_n0068_pins<92>"
+        BEL "grapic_inst/U2/Vsync" BEL "grapic_inst/U2/Hsync" BEL
+        "grapic_inst/U2/Ypixel2_2" BEL "grapic_inst/U2/Ypixel2_1" BEL
+        "grapic_inst/U2/Ypixel2_0" BEL "grapic_inst/U2/Xpixel2_2" BEL
+        "grapic_inst/U2/Xpixel2_1" BEL "grapic_inst/U2/Xpixel2_0" BEL "n_FR"
+        BEL "AR_shift" BEL "jstk_enc_instance/jstk_instance/sampled_MISO" BEL
+        "grapic_inst/U2/Hsync2" BEL "grapic_inst/U2/Vsync2" BEL
+        "clk_BUFGP/BUFG" PIN "U3/Mram_p_mem_pins<16>" PIN
+        "U3/Mram_p_mem_pins<17>" PIN "grapic_inst/U1/Mram_pictMem4_pins<28>"
+        PIN "grapic_inst/U1/Mram_pictMem4_pins<29>" PIN
+        "grapic_inst/U1/Mram_pictMem2_pins<28>" PIN
+        "grapic_inst/U1/Mram_pictMem2_pins<29>" PIN
+        "grapic_inst/U1/Mram_pictMem3_pins<28>" PIN
+        "grapic_inst/U1/Mram_pictMem3_pins<29>" PIN
+        "grapic_inst/U1/Mram_pictMem1_pins<28>" PIN
+        "grapic_inst/U1/Mram_pictMem1_pins<29>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

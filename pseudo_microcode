@@ -1,0 +1,97 @@
+-- --Wait loop
+-- b"10001_00_00_000000000000",--00 jmp to 00
+-- --Find direction to turn
+-- b"01101_00_00_000000000000",--01 ldj jstk to AR
+-- b"01111_00_00_moverightc", --02 CMPA AR to "0001" 
+-- b"01011_00_00_moverightf", --03 BEQ moveRight
+-- b"01101_00_00_000000000000",--04 ldj jstk to AR
+-- b"01111_00_00_moveleftc", --05 CMPA AR to "0010" 
+-- b"01011_00_00_moveleftf", --06 BEQ moveLeft
+-- b"01101_00_00_000000000000",--07 ldj jstk to AR
+-- b"01111_00_00_movedownc", --08 CMPA AR to "0100" 
+-- b"01011_00_00_movedownf", --09 BEQ moveDown
+-- b"01101_00_00_000000000000",--0A ldj jstk to AR
+-- b"01111_00_00_moveupc", --0B CMPA AR to "1000" 
+-- b"01011_00_00_moveupf", --09 BEQ moveUp
+-- --Check apple
+-- b"00001_11_00_snakeHeadPos", --0A load gr3, snake_head_pos
+-- b"01110_11_00_applePos", --0B cmp gr3, apple_pos
+-- b"01011_00_00_appleFound", --0C beq to appleFound
+-- --load snake length
+-- b"10000_00_00_snakeLength", --0D STRLC snake_length -> LC 
+-- b"10100_00_00_snakeHeadPos", --0E ldhr hr, snakeHeadPos
+-- --Remove tail loop
+-- b"10110_00_00_000000000000", --0F vhr_load pictmem(hr), gr0
+-- b"11000_00_00_constOne", --10 LC--  --EJ MÖJLIG
+-- b"01111_00_00_constZero", --11 LC = 0 --EJ MÖJLIG
+-- b"01011_00_00_tailRemoval", --12 beq tailRemoval
+-- b"01110_00_00_moveRightTile", --13 cmp gr0 to moveRightTile
+-- b"01011_00_00_movePointerRight", --14 beq movePointerRight
+-- b"01110_00_00_moveLeftTile", --15 cmp gr0 to moveLeftTile
+-- b"01011_00_00_movePointerLeft", --16 beq movePointerLeft  
+-- b"01110_00_00_moveDownTile", --17 cmp gr0 to moveDownTile
+-- b"01011_00_00_movePointerDown", --18 beq movePointerDown
+-- b"01110_00_00_moveUpTile", --19 cmp gr0 to moveUpTile
+-- b"01011_00_00_movePointerUp", --1A beq movePointerUp
+-- --movePoinerRight
+-- b"10111_00_00_constOne", --1B AddHR HR, 1
+-- b"10001_00_00_000000001111" --1C jmp Remove tail loop
+-- --movePointerLeft
+-- b"11000_00_00_constOne", --1D SUBHR HR, 1
+-- b"10001_00_00_000000001111" --1E jmp Remove tail loop
+-- --movePointerDown
+-- b"10111_00_00_constEighty", --1F AddHR HR, 80
+-- b"10001_00_00_000000001111" --20 jmp Remove tail loop
+-- --movePointerUp    
+-- b"10111_00_00_constEighty", --21 AddHR HR, 80
+-- b"10001_00_00_000000001111" --22 jmp Remove tail loop
+-- --Tail removal
+-- b"00001_10_00_backgroundPic", --23 load gr2, snake_lenght
+-- b"10101_10_00_000000000000", --24 vhr_store gr2, hr
+-- --Apple found
+-- b"00001_11_00_snakeLength", --25 load gr3, snakeLength
+-- b"00011_11_00_constOne", --26 add gr3, constOne
+-- b"00010_11_00_snakeLenght", --27 store gr3, snakeLegth
+-- b"00001_11_00_applePic", --28 load gr3, applePic
+-- b"10010_00_00_000000000000", --29 LDRAN
+-- b"10110_11_00_000000000000", --2A vhr_store gr3
+-- b"10001_00_00_000000000000", --2B jmp Wait loop
+-- --Move snake up
+-- b"00001_01_00_snakeHeadPos", --2C load gr1, snakeHeadPos
+-- b"00101_01_00_constEighty", --2D sub gr1, constEighty
+-- b"00010_01_00_snakeHeadPos", --2E store gr1, snakeHeadPos
+-- b"00001_10_00_moveDownTile", --2F load gr2, moveDownTile (ska va inverterad)
+-- b"10100_00_00_snakeHeadPos", --30 ldhr hr:=snakeHeadPos
+-- b"10101_10_00_000000000000", --31 vhr_store GR2
+-- b"10001_00_00_000000001010", --32 jmp Check apple
+-- --Move snake down
+-- b"00001_01_00_snakeHeadPos", --33 load gr1, snakeHeadPos
+-- b"00011_01_00_constEighty", --34 add gr1, constEighty
+-- b"00010_01_00_snakeHeadPos", --35 store gr1, snakeHeadPos
+-- b"00001_10_00_moveUpTile", --36 load gr2, moveUpTile (ska va inverterad)
+-- b"10100_00_00_snakeHeadPos", --37 ldhr hr:=snakeHeadPos
+-- b"10101_10_00_000000000000", --38 vhr_store GR2
+-- b"10001_00_00_000000001010", --39 jmp Check apple
+-- --Move snake left
+-- b"00001_01_00_snakeHeadPos", --2C load gr1, snakeHeadPos
+-- b"00101_01_00_constOne", --2D sub gr1, constOne
+-- b"00010_01_00_snakeHeadPos", --2E store gr1, snakeHeadPos
+-- b"00001_10_00_moveRightTile", --2F load gr2, moveRightTile (ska va inverterad)
+-- b"10100_00_00_snakeHeadPos", --30 ldhr hr:=snakeHeadPos
+-- b"10101_10_00_000000000000", --31 vhr_store GR2
+-- b"10001_00_00_000000001010", --32 jmp Check apple
+-- --Move snake right
+-- b"00001_01_00_snakeHeadPos", --33 load gr1, snakeHeadPos
+-- b"00011_01_00_constOne", --34 add gr1, constOne
+-- b"00010_01_00_snakeHeadPos", --35 store gr1, snakeHeadPos
+-- b"00001_10_00_moveLeftTile", --36 load gr2, moveLeftTile (ska va inverterad)
+-- b"10100_00_00_snakeHeadPos", --37 ldhr hr:=snakeHeadPos
+-- b"10101_10_00_000000000000", --38 vhr_store GR2
+-- b"10001_00_00_000000001010", --39 jmp Check apple
+-- --Constants
+-- b"00000_00_00_000000000000", --3A constZero
+-- b"00000_00_00_000000000001", --3B constOne
+-- b"00000_00_00_000001010000", --3C constEighty
+-- --Variables
+-- b"00000_00_00_position", --3D snakeHeadPos
+-- b"00000_00_00_000000000101", --3E snakeLength
